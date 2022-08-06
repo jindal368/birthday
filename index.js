@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000 || process.env.PORT
+const port = 5000 || process.env.PORT
 app.use('/style', express.static(__dirname + '/style'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/script', express.static(__dirname + '/script'));
