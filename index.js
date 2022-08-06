@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.listen(5000 || process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log(`Example app listening on port `)
 })
