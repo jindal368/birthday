@@ -1,11 +1,17 @@
 // Import the data to customize and insert them into page
 const fetchData = () => {
-  var audio = new Audio('audio.mp3');
+  var audio = document.createElement("AUDIO")
+  document.body.appendChild(audio);
+  audio.src = "./audio/audio.mp3"
+
+  document.body.addEventListener("mousemove", function () {
+    audio.play()
+  })
+
 
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
-      audio.play();
       dataArr = Object.keys(data);
       dataArr.map(customData => {
         if (data[customData] !== "") {
